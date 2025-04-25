@@ -1,0 +1,71 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Light mode colors from image */
+  --slate-gray: #6c809a;
+  --ash-gray: #cbd4c2;
+  --snow: #fffcff;
+  --russian-violet: #0d0630;
+  --space-cadet: #111d4a;
+
+  /* Theme variables */
+  --bg-primary: var(--snow);
+  --text-primary: var(--russian-violet);
+  --nav-bg: var(--slate-gray);
+  --card-bg: var(--ash-gray);
+  --accent-color: var(--space-cadet);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode */
+:root.dark {
+  --bg-primary: var(--russian-violet);
+  --text-primary: var(--snow);
+  --nav-bg: var(--space-cadet);
+  --card-bg: var(--slate-gray);
+  --accent-color: var(--ash-gray);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+/* Auth forms */
+.auth-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h1 {
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+/* Transition effects */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
